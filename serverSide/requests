@@ -1,0 +1,19 @@
+https://apis.nbg.gr/public/sandbox/billpayments/v2/Payments/status
+
+[{"key":"sandbox_id","value":"hackathon_insurance_sb"},{"key":"application_id","value":"5c5eb1e4e4b08673622af6bc"},{"key":"user_id","value":"37730fbd-96f9-4d0e-8198-dbe6788c6987"},{"key":"username","value":"smart_insurance"},{"key":"provider_id","value":"NBG.gr"},{"key":"provider","value":"NBG"},{"key":"Content-Type","value":"application/json"},{"key":"x-ibm-client-id","value":"449fbd72-6ff2-4406-9663-668346c3b7ab"}]
+
+access token : a9911b56cac15551a0f3a9a334975098ed065cc9f607407c43c1fa95bebc817e
+
+{
+  "header": {
+    "ID": "{{$guid}}",
+    "application": "449fbd72-6ff2-4406-9663-668346c3b7ab",
+    "channel": "{{channel}}"
+  },
+  "payload": {
+    "userId": "37730fbd-96f9-4d0e-8198-dbe6788c6987",
+    "PaymentIdentification": {
+    	"clrSysRef": "{{clrSysRef}}"
+    }
+  }
+}

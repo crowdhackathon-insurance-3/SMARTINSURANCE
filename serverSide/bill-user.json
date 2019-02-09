@@ -1,0 +1,71 @@
+[
+{
+    "payload": {
+        "userId": "37730fbd-96f9-4d0e-8198-dbe6788c6987",
+        "userName": "smart_insurance",
+        "providerId": "NBG.gr",
+        "provider": "NBG",
+        "userType": "IBANK_USER",
+        "spotMachineID": null,
+        "userAccounts": []
+    },
+    "exception": null,
+    "messages": null,
+    "executionTime": 0
+},
+{
+    "payload": {
+        "userId": "2e75c510-29b4-4f60-984d-33c4b0d46823",
+        "userName": "client1",
+        "providerId": "NBG.gr",
+        "provider": "NBG",
+        "userType": "IBANK_USER",
+        "spotMachineID": null,
+        "userAccounts": []
+    },
+    "exception": null,
+    "messages": null,
+    "executionTime": 0
+}
+,{
+    "payload": {
+        "userId": "76482b14-76a6-4550-adf3-ecbe49afe82a",
+        "userName": "broker1",
+        "providerId": "NBG.gr",
+        "provider": "NBG",
+        "userType": "IBANK_USER",
+        "spotMachineID": null,
+        "userAccounts": []
+    },
+    "exception": null,
+    "messages": null,
+    "executionTime": 0
+}
+,{
+    "payload": {
+        "userId": "3614fd4d-fed8-458b-a9f0-70b6d59d8d8b",
+        "userName": "company1",
+        "providerId": "NBG.gr",
+        "provider": "NBG",
+        "userType": "IBANK_USER",
+        "spotMachineID": null,
+        "userAccounts": []
+    },
+    "exception": null,
+    "messages": null,
+    "executionTime": 0
+},{
+    "payload": {
+        "userId": "f5ae7bf7-889e-44de-a87f-f78e9ba00e55",
+        "userName": "agency1",
+        "providerId": "NBG.gr",
+        "provider": "NBG",
+        "userType": "IBANK_USER",
+        "spotMachineID": null,
+        "userAccounts": []
+    },
+    "exception": null,
+    "messages": null,
+    "executionTime": 0
+}
+]

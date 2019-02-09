@@ -1,0 +1,251 @@
+{
+    "sandboxID": "hackathon_insurance_sb",
+    "users": [
+        {
+            "userId": "37730fbd-96f9-4d0e-8198-dbe6788c6987",
+            "userName": "smart_insurance",
+            "providerId": "NBG.gr",
+            "provider": "NBG",
+            "userType": "IBANK_USER",
+            "spotMachineID": "e0c3cfc6-db41-432a-8fa5-dbb230dbcfed",
+            "userAccounts": [
+                {
+                    "accountId": "d3bbdc30-741e-4bee-a5cc-eff8ac4982f7",
+                    "balance": 100000,
+                    "accountType": "IBAN",
+                    "accountTypeValue": "GR8979540708770489"
+                }
+            ]
+        },
+        {
+            "userId": "e6da8f9c-ee8b-488c-9179-0a566e9d8aed",
+            "userName": "User1",
+            "providerId": "NBG.gr",
+            "provider": "NBG",
+            "userType": "IBANK_USER",
+            "spotMachineID": "e0c3cfc6-db41-432a-8fa5-dbb230dbcfed",
+            "userAccounts": [
+                {
+                    "accountId": "d3bbdc30-741e-4bee-a5cc-eff8ac4982f7",
+                    "balance": 100000,
+                    "accountType": "IBAN",
+                    "accountTypeValue": "GR8979540708770489"
+                }
+            ]
+        },
+        {
+            "userId": "acd77e31-a637-48b6-a070-ffc5d1d68e63",
+            "userName": "User2",
+            "providerId": "NBG.gr",
+            "provider": "NBG",
+            "userType": "IBANK_USER",
+            "spotMachineID": null,
+            "userAccounts": [
+                {
+                    "accountId": "e146dde9-663c-47ea-8322-afda2c2aa907",
+                    "balance": 100000,
+                    "accountType": "IBAN",
+                    "accountTypeValue": "GR7816570557954408"
+                }
+            ]
+        },
+        {
+            "userId": "1eba60ac-62d8-4fea-bd67-40af173d7e1f",
+            "userName": "MEDIATOR_USER1",
+            "providerId": "NBG.gr",
+            "provider": "NBG",
+            "userType": "MEDIATOR",
+            "spotMachineID": "c850e76e-6ea7-45b4-af18-742ef516944b",
+            "userAccounts": []
+        },
+        {
+            "userId": "e302d3fb-d53f-4f55-a2cf-de4d0611191c",
+            "userName": "MEDIATOR_MACHINE_USER1",
+            "providerId": "NBG.gr",
+            "provider": "NBG",
+            "userType": "MEDIATOR",
+            "spotMachineID": "cae44dde-2e0d-45aa-8c45-71f0a36ee3e7",
+            "userAccounts": [
+                {
+                    "accountId": "a222de0f-c803-42e6-8e0a-e7ca76c2c552",
+                    "balance": 100000,
+                    "accountType": "IBAN",
+                    "accountTypeValue": "GR2539560718447876"
+                }
+            ]
+        },
+        {
+            "userId": "177814de-fa11-4d89-99fb-3343cbe01d98",
+            "userName": "MEDIATOR_MACHINE_USER2",
+            "providerId": "NBG.gr",
+            "provider": "NBG",
+            "userType": "MACHINE",
+            "spotMachineID": "ed833e5a-ffcd-46cf-aa0c-0ad527ea1c5b",
+            "userAccounts": [
+                {
+                    "accountId": "8359dd7c-aa71-42f1-a7e7-df8aa18f7ebe",
+                    "balance": 100000,
+                    "accountType": "IBAN",
+                    "accountTypeValue": "GR5579486657194533"
+                }
+            ]
+        },
+        {
+            "userId": "d7fdc557-9088-431a-a3f2-e78444b90f46",
+            "userName": "MACHINE_USER1",
+            "providerId": "NBG.gr",
+            "provider": "NBG",
+            "userType": "MACHINE",
+            "spotMachineID": "0e9ee31e-a104-47ae-b69f-609a2391d610",
+            "userAccounts": [
+                {
+                    "accountId": "1228b2d0-961a-4624-85ec-960665a2e235",
+                    "balance": 100000,
+                    "accountType": "IBAN",
+                    "accountTypeValue": "GR7709480620146655"
+                }
+            ]
+        },
+        {
+            "userId": "4547cfbd-bffd-4e1e-83ec-d50dd16d7792",
+            "userName": "MACHINE_USER2",
+            "providerId": "NBG.gr",
+            "provider": "NBG",
+            "userType": "MACHINE",
+            "spotMachineID": "8e18d9e3-3f5f-4957-a689-708b58d4ffcd",
+            "userAccounts": [
+                {
+                    "accountId": "48897307-2247-4514-8ace-1e2fbd2e17b3",
+                    "balance": 100000,
+                    "accountType": "IBAN",
+                    "accountTypeValue": "GR775496558894651"
+                }
+            ]
+        }
+    ],
+    "networks": [
+        {
+            "id": "7fa7e3e0-77d1-4587-b04e-7e8793c0263e",
+            "name": "TPP4USERS_NETWORK",
+            "commercialName": "TPP4USERS_NETWORK",
+            "paymentChannel": "5bd5d761-fee4-4ee9-a412-3769e14d2fc6",
+            "ownerIBUserId": "e6da8f9c-ee8b-488c-9179-0a566e9d8aed",
+            "startDate": "2019-02-09T13:56:28.017Z",
+            "endDate": "2020-02-09T13:56:28.017Z",
+            "networkMetadata": [
+                {
+                    "id": "ab593dbe-01ac-4d9a-8eed-ab7eb9fc20c7",
+                    "fieldKey": "IS_CANCEL_ADMIN_ALLOWED",
+                    "fieldValue": "FALSE"
+                },
+                {
+                    "id": "de1cecc7-7936-4739-a476-b13c2a6c6920",
+                    "fieldKey": "CANCELLATION_WITH_REPAY",
+                    "fieldValue": "FALSE"
+                },
+                {
+                    "id": "fec2eb8a-ca04-4c1b-9330-946a9959b2d9",
+                    "fieldKey": "MODE",
+                    "fieldValue": "TPP4USERS"
+                },
+                {
+                    "id": "bb41c968-1c4b-4083-a3f7-82913dbb9c51",
+                    "fieldKey": "MAX_CANCELLATION_PERC",
+                    "fieldValue": "0"
+                },
+                {
+                    "id": "67affbe8-026f-41ac-b13b-4b2a1d0f10cf",
+                    "fieldKey": "TRANSACTION_TERMINAL_PASSWORD_GENERATION_MODE",
+                    "fieldValue": "DEFAULT"
+                },
+                {
+                    "id": "9731c166-3733-4d3a-a0af-35ad48d1bfc4",
+                    "fieldKey": "MIN_CANCELLATION_PERC",
+                    "fieldValue": "0"
+                }
+            ],
+            "networkAccounts": [
+                {
+                    "id": "8a82af32-25df-48b8-b29e-79d1cb37b5df",
+                    "IBANorBBAN": "GR5983850494884574",
+                    "PAN": null,
+                    "accountType": "ULTDEBTOR_INTERACCOUNT"
+                }
+            ],
+            "networkLimits": [],
+            "networkMessages": [],
+            "spots": [
+                {
+                    "id": "7b75b6ac-0ca8-4e38-ba36-d21a94f829dc",
+                    "name": "TPP4USERSSPOT",
+                    "comments": null,
+                    "address": "Γαργγητού 99",
+                    "startDate": "2019-02-09T13:56:28.017Z",
+                    "endDate": "2020-02-09T13:56:28.017Z",
+                    "ownerIBUserId": "e6da8f9c-ee8b-488c-9179-0a566e9d8aed",
+                    "ssn": "D16H1PKMSP",
+                    "status": "ENABLED",
+                    "authorizationUpdateLvl": "NETWORK",
+                    "spotMachines": [
+                        {
+                            "id": "e0c3cfc6-db41-432a-8fa5-dbb230dbcfed",
+                            "machineId": "DemoTPP4UsersSpotMachine1",
+                            "serialNo": "",
+                            "machineType": "TransactionTerminal",
+                            "description": "DemoTPP4UsersSpotMachine1",
+                            "installedSoftware": "CASH_REGISTER_SIMPLE_PAY_SPOT",
+                            "installedDate": "2019-02-09T13:56:28.017Z",
+                            "startDate": "2019-02-09T13:56:28.017Z",
+                            "endDate": "2020-02-09T13:56:28.017Z",
+                            "status": "ENABLED",
+                            "authorizationUpdateLvl": null,
+                            "store": "",
+                            "spotMachineOTTs": [],
+                            "spotMachineTransactions": [
+                            ],
+                            "spotMachineAccounts": [
+                                {
+                                    "id": "d3bbdc30-741e-4bee-a5cc-eff8ac4982f7",
+                                    "IBANorBBAN": "GR8979540708770489",
+                                    "PAN": null
+                                }
+                            ],
+                            "spotMachineNetworkLimits": [
+                                {
+                                    "id": "b98e0f04-2660-463f-b97f-146ac93bd256",
+                                    "limitType": "REVERSAL",
+                                    "limitScope": "SPOT_MACHINE",
+                                    "interval": 5,
+                                    "maxCount": 1000,
+                                    "maxAmount": 1000000,
+                                    "startDate": "2019-02-09T13:56:28.017Z",
+                                    "endDate": "2119-02-09T13:56:28.017Z"
+                                }
+                            ],
+                            "spotMachineNetworkMessage": [
+                                {
+                                    "id": "0386c144-0c01-4f28-b3da-1a3d9bf68274",
+                                    "category": "WELCOME",
+                                    "content": "Welcome to our network!",
+                                    "contentType": "Content Type",
+                                    "bitmapContent": null,
+                                    "endDate": "2119-02-09T13:56:28.017Z",
+                                    "startDate": "2019-02-09T13:56:28.017Z"
+                                }
+                            ],
+                            "spotMachineLocation": {
+                                "id": "6c323092-7540-408f-ad6d-9d9d2fafc365",
+                                "latitude": "47.65100",
+                                "longitude": "-122.34900",
+                                "coordinatesSystem": "DECIMAL",
+                                "address": null
+                            }
+                        }
+                    ],
+                    "spotNetworkLimits": [],
+                    "spotNetworkMessages": []
+                }
+            ]
+        }
+    ]
+}
