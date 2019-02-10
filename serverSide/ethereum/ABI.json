@@ -40,6 +40,14 @@
 			{
 				"name": "_property",
 				"type": "uint8"
+			},
+			{
+				"name": "_iban",
+				"type": "string"
+			},
+			{
+				"name": "_micropayments",
+				"type": "bool"
 			}
 		],
 		"name": "addUser",
@@ -87,6 +95,14 @@
 			},
 			{
 				"name": "_active",
+				"type": "bool"
+			},
+			{
+				"name": "_iban",
+				"type": "string"
+			},
+			{
+				"name": "_micropayments",
 				"type": "bool"
 			}
 		],
@@ -137,26 +153,21 @@
 	},
 	{
 		"constant": true,
-		"inputs": [],
-		"name": "getDate",
-		"outputs": [
+		"inputs": [
 			{
-				"name": "",
+				"name": "_id",
 				"type": "uint256"
 			}
 		],
-		"payable": false,
-		"stateMutability": "view",
-		"type": "function"
-	},
-	{
-		"constant": true,
-		"inputs": [],
-		"name": "getDependingContractsOfUser",
+		"name": "getCommissions",
 		"outputs": [
 			{
 				"name": "",
-				"type": "uint256[]"
+				"type": "uint8"
+			},
+			{
+				"name": "",
+				"type": "uint8"
 			}
 		],
 		"payable": false,
@@ -171,7 +182,7 @@
 				"type": "uint256"
 			}
 		],
-		"name": "getOrdersDetail",
+		"name": "getContractDetail",
 		"outputs": [
 			{
 				"name": "",
@@ -192,6 +203,38 @@
 			{
 				"name": "",
 				"type": "uint256"
+			},
+			{
+				"name": "",
+				"type": "bool"
+			}
+		],
+		"payable": false,
+		"stateMutability": "view",
+		"type": "function"
+	},
+	{
+		"constant": true,
+		"inputs": [],
+		"name": "getContractsWithMicropayments",
+		"outputs": [
+			{
+				"name": "",
+				"type": "uint256[]"
+			}
+		],
+		"payable": false,
+		"stateMutability": "view",
+		"type": "function"
+	},
+	{
+		"constant": true,
+		"inputs": [],
+		"name": "getDate",
+		"outputs": [
+			{
+				"name": "",
+				"type": "uint256"
 			}
 		],
 		"payable": false,
@@ -202,6 +245,39 @@
 		"constant": true,
 		"inputs": [],
 		"name": "getPaidContractsOfUser",
+		"outputs": [
+			{
+				"name": "",
+				"type": "uint256[]"
+			}
+		],
+		"payable": false,
+		"stateMutability": "view",
+		"type": "function"
+	},
+	{
+		"constant": true,
+		"inputs": [
+			{
+				"name": "_id",
+				"type": "uint256"
+			}
+		],
+		"name": "getPaymentCode",
+		"outputs": [
+			{
+				"name": "",
+				"type": "uint256"
+			}
+		],
+		"payable": false,
+		"stateMutability": "view",
+		"type": "function"
+	},
+	{
+		"constant": true,
+		"inputs": [],
+		"name": "getPendingContractsOfUser",
 		"outputs": [
 			{
 				"name": "",
@@ -257,6 +333,10 @@
 			{
 				"name": "",
 				"type": "uint8"
+			},
+			{
+				"name": "",
+				"type": "bool"
 			},
 			{
 				"name": "",
