@@ -1,0 +1,52 @@
+    86400 is a unix day
+	***********
+    Add new user
+    addUser(string _name, uint8 _property)
+	
+	Name
+	Just the company name
+	
+	Property
+	0 -> Insurance Company 
+    1 -> Agency Company
+    2 -> Agent
+	***********
+    
+    Edit user
+    editUser(address _userAddress, string _name, uint8 _property, bool _active)
+    ********************
+	Agent Company inserts a new contract
+    addContract(address _insuranceCompanyAddress, address _agentAddress, uint8 _agentCommission, uint16 _amount) returns(uint) 
+	
+	******************
+    Insurance Company adds commision to Agent and DIAS unique number
+     completeContract(uint _id, uint8 _agencyCompanyCommission, uint _dias)
+	**************
+    Mark contract as paid
+    paidContract(uint _id) 
+	*****************    
+    setDate(uint _date)
+	
+    getDate() returns(uint)
+	
+	****************
+    
+    getPaidContractsOfUser() returns(uint[]) 
+	
+	****************
+    
+    getUnpaidContractsOfUser() returns(uint[]) 
+    
+	****************
+    getOrdersDetail(uint _id) (uint, uint16, uint, uint8, uint) {
+        return(dias, amount, date, Commission1, Commission2);
+    }
+    
+	***************
+    getUserInfo(address _userAddress) returns(string, uint8, bool) {
+        return(name, property, active);
+    }
+    ***************
+    getDependingContractsOfUser() returns(uint[])
+    **************
+    getUnpaidContracts() returns(uint[]) 
