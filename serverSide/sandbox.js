@@ -3,8 +3,18 @@ const uuidv4 = require('uuid/v4');
 
 var request = require("request");
 
-let ids = ["76632425551517325634","55318415471210617334","70253341505452305768","11351017241765681620","11740352355888146110","11777157056551714216","02414007537303340328","23038521380267724844","32716804440614286552","25101272043518276456"];
-
+let ids = [
+    "37752202351003166010",
+    "68671644254254080000",
+    "74564751478256340000",
+    "42656347522716600000",
+    "55451471862352200000",
+    "30655285811706200000",
+    "43236881816180500000",
+    "84887551807072600000",
+    "50642631548016300000",
+    "31321304642358500000"
+];
 
 let transaction_template = {
     "id": "9cb93365-b498-403d-ae2e-dfe788e25b71",
@@ -64,7 +74,7 @@ function generateSandbox(){
         tmp.id = uuidv4();
         tmp.txId = uuidv4();
         tmp.instrId = uuidv4();
-        tmp.clearSysRef = rand20();
+        tmp.clearSysRef = ids[i];
         tmp.endToEndId = rand20();
         tmp.amount = rand(10,100);
         sandbox.networks[0].spots[0].spotMachines[0].spotMachineTransactions.push(tmp);
@@ -82,7 +92,7 @@ function push(sandbox,callback){
         headers: {
             "Content-Type": "application/json",
             "x-ibm-client-id": "449fbd72-6ff2-4406-9663-668346c3b7ab",
-            "Authorization" : "Bearer ec2b6583a8c41e4ca2f3e73d36c53db1cc63b7c9911a9fbf537c0df44b6abc3a"
+            "Authorization" : "Bearer fba4700dcba22a8342858c4f0b81fb38981e27a789f9f4937f818b44f0281606"
         },
         body : JSON.stringify(sandbox)
     };
@@ -100,7 +110,7 @@ function push(sandbox,callback){
 
 }
 
-function pay(id,callback){
+function setStatus(id,status,callback){
 
     var options = {
         url: "https://apis.nbg.gr/public/sandbox/billpayments/v2/sandbox/hackathon_insurance_sb/transactions",
@@ -108,13 +118,13 @@ function pay(id,callback){
         headers: {
             "Content-Type": "application/json",
             "x-ibm-client-id": "449fbd72-6ff2-4406-9663-668346c3b7ab",
-            "Authorization" : "Bearer ec2b6583a8c41e4ca2f3e73d36c53db1cc63b7c9911a9fbf537c0df44b6abc3a"
+            "Authorization" : "Bearer fba4700dcba22a8342858c4f0b81fb38981e27a789f9f4937f818b44f0281606"
         },
         body : JSON.stringify({
             "paymentIdentification": {
                 "clrSysRef": id
             },
-            "status": "COMPLETED"
+            "status": status
         })
     };
 
@@ -133,6 +143,32 @@ function pay(id,callback){
 
 
 
+function getSandbox(sandbox,callback){
+
+    var options = {
+        url: "https://apis.nbg.gr/public/sandbox/billpayments/v2/sandbox/hackathon_insurance_sb",
+        method: "GET",
+        headers: {
+            "Content-Type": "application/json",
+            "x-ibm-client-id": "449fbd72-6ff2-4406-9663-668346c3b7ab",
+            "Authorization" : "Bearer fba4700dcba22a8342858c4f0b81fb38981e27a789f9f4937f818b44f0281606"
+        },
+        body : JSON.stringify(sandbox)
+    };
+
+    console.log("pushing");
+
+    request(options, function (error, response, body) {
+        if (error) {
+            callback(error);
+            return;
+        }
+        console.log("success");
+        callback(body);
+    })
+
+}
+
 
 function getStatus(id,callback){
     
@@ -142,7 +178,7 @@ function getStatus(id,callback){
         headers: {
             "Content-Type": "application/json",
             "x-ibm-client-id": "449fbd72-6ff2-4406-9663-668346c3b7ab",
-            "Authorization" : "Bearer ec2b6583a8c41e4ca2f3e73d36c53db1cc63b7c9911a9fbf537c0df44b6abc3a",
+            "Authorization" : "Bearer fba4700dcba22a8342858c4f0b81fb38981e27a789f9f4937f818b44f0281606",
             "sandbox_id" : "hackathon_insurance_sb",
             "application_id" : "5c5eb1e4e4b08673622af6bc",
             "user_id" : "37730fbd-96f9-4d0e-8198-dbe6788c6987",
@@ -177,10 +213,21 @@ function getStatus(id,callback){
     })
 }
 
+function pay(id,cb){
+    setStatus(id,"COMPLETED",cb)
+}
+function cancel(id,cb){
+    setStatus(id,"PENDING",cb)
+}
+
+
+
 module.exports = {
     generate : generateSandbox,
     push : push,
     getPaymentStatus : getStatus,
-    pay : pay
+    pay : pay,
+    cancel : cancel,
+    getSandbox : getSandbox
 }
 
