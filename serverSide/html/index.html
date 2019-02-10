@@ -2,10 +2,63 @@
 
 
 <head>
+    <script>
+        var data = __data__;
+        
+        function pay(id){
+            var xhttp = new XMLHttpRequest();
+            xhttp.onreadystatechange = function() {
+                if (this.readyState == 4 && this.status == 200) {
+                    alert("Success");
+                }
+            };
+            xhttp.open("GET", "/pay?payment_code="+id, true);
+            xhttp.send();
+        }
 
+        function cancel(id){
+            var xhttp = new XMLHttpRequest();
+            xhttp.onreadystatechange = function() {
+                if (this.readyState == 4 && this.status == 200) {
+                    alert("Success");
+                }
+            };
+            xhttp.open("GET", "/cancel?payment_code="+id, true);
+            xhttp.send();
+        }
+
+        setInterval(()=>location.reload(),10000);
+
+    </script>
+    <style>
+        body{
+            font-family : Calibri;
+        }
+        .pay{
+            text-decoration: underline;
+            color : green;
+            margin-left : 15px;
+            cursor : pointer;
+            
+        }
+    </style>
 </head>
 <body>
-    <form>
-    </form>
+    <div id="root"></div>
+
+    <script>
+        data.map(item=>{
+            var s = document.createElement("div");
+            var b = document.createElement("span");
+            var t = document.createElement("span");
+            b.className = "pay"
+            b.textContent = item.status=="COMPLETED"?"Cancel":"Pay";
+            t.textContent = item.code + " : " + item.status;
+            s.appendChild(t);
+            s.appendChild(b);
+            b.onclick = item.status=="COMPLETED"?()=>cancel(item.code):()=>pay(item.code);
+            document.getElementById("root").appendChild(s);
+        })
+    </script>
 </body>
 </html>
