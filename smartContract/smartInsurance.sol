@@ -43,7 +43,7 @@ contract smartInsurance {
     mapping(uint => Contract) private contracts;
     
     // Keep unpaid contracts for each user
-    mapping(address => uint[]) private unpaidContracts;
+    mapping(address => uint[]) public unpaidContracts;
     
     // Keep paid contracts for each user
     mapping(address => uint[]) private paidContracts;
@@ -55,7 +55,7 @@ contract smartInsurance {
     uint id;
     
     // Array of all unpaid contracts
-    uint[] unpaidContractsArray;
+    uint[] public unpaidContractsArray;
     
     // Array for contracts with _micropayments
     uint[] micropaymentContractsArray;
@@ -117,9 +117,9 @@ contract smartInsurance {
         contracts[_id].date = getDate();
         
         // Add it as unpaid order
-        unpaidContracts[contracts[_id].insuranceCompanyAddress].push(id-1);
-        unpaidContracts[contracts[_id].agencyCompanyAddress].push(id-1);
-        unpaidContracts[contracts[_id].agentAddress].push(id-1);
+        unpaidContracts[contracts[_id].insuranceCompanyAddress].push(_id);
+        unpaidContracts[contracts[_id].agencyCompanyAddress].push(_id);
+        unpaidContracts[contracts[_id].agentAddress].push(_id);
         unpaidContractsArray.push(_id);
         
         // check if will use micropayments
@@ -212,6 +212,11 @@ contract smartInsurance {
     // Get the commissions of a specific contract
     function getCommissions(uint _id) public view returns(uint8, uint8) {
         return(contracts[_id].agencyCompanyCommission, contracts[_id].agentCommission);
+    }
+    
+    // Get the payment code
+    function getPaymentCode(uint _id) public isOwnable view returns(uint256) {
+        return contracts[_id].dias;
     }
     
     // Deletes a specific element from an array
